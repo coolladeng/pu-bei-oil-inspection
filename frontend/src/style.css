@@ -1,0 +1,49 @@
+/* 石油巡检管理系统 - 全局样式（深色科技风） */
+:root {
+  --bg-primary: #0A1628;
+  --bg-secondary: #132238;
+  --bg-card: rgba(19, 34, 56, 0.8);
+  --primary: #00D4FF;
+  --primary-glow: rgba(0, 212, 255, 0.3);
+  --accent: #7B61FF;
+  --success: #00E676;
+  --warning: #FFB300;
+  --danger: #FF1744;
+  --text-primary: #FFFFFF;
+  --text-secondary: #8892A0;
+  --border-color: #1E3A5F;
+  --border-glow: rgba(0, 212, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

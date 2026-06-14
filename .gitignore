@@ -1,0 +1,30 @@
+﻿# Android
+.gradle/
+build/
+*.apk
+*.aab
+*.dex
+*.class
+local.properties
+*.iml
+.idea/
+*.log
+*.hprof
+
+# Node
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.swp
