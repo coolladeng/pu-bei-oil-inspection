@@ -2,6 +2,7 @@ package com.oilinspection.app.data.repository
 
 import com.oilinspection.app.data.api.InspectionApi
 import com.oilinspection.app.data.api.RunPlanItem
+import com.oilinspection.app.data.api.RunPointItem
 import com.oilinspection.app.data.api.RunRecordSubmit
 import com.oilinspection.app.data.local.dao.PendingRecordDao
 import com.oilinspection.app.data.local.dao.RunPlanDao

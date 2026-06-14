@@ -47,7 +47,7 @@ class MainActivity : ComponentActivity() {
         )
         val filters = arrayOf(android.content.IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED))
         val techList = arrayOf(
-            arrayOf(android.nfc.tech.NfcA::class.java.name, android.nfc.tech.Ntag213::class.java.name)
+            arrayOf(android.nfc.tech.NfcA::class.java.name, android.nfc.tech.NfcA::class.java.name)
         )
         try {
             nfcAdapter?.enableForegroundDispatch(this, intent, filters, techList)

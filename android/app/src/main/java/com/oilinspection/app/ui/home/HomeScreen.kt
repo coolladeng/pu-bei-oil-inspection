@@ -47,6 +47,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -135,10 +136,12 @@ fun HomeScreen(
                 1 -> EquipmentTab(equipments = uiState.equipments, isLoading = uiState.isLoading, onLoad = { viewModel.loadEquipments() })
                 2 -> HazardTab(hazards = uiState.hazards, isLoading = uiState.isLoading, onLoad = { viewModel.loadHazards() })
                 3 -> ProfileTab(
+                    profile = uiState.profile,
                     onLogout = {
                         viewModel.logout()
                         onLogout()
-                    }
+                    },
+                    onLoad = { viewModel.loadProfile() }
                 )
             }
         }
@@ -610,9 +613,9 @@ private fun ProfileTab(
         ) {
             Column(modifier = Modifier.padding(20.dp)) {
                 InfoRow("用户名", profile?.username ?: "-")
-                HorizontalDivider(color = DividerDark, modifier = Modifier.padding(vertical = 12.dp))
+                HorizontalDivider(color = Color(0xFF1A3355), modifier = Modifier.padding(vertical = 12.dp))
                 InfoRow("角色", profile?.roles?.joinToString(", ") ?: "-")
-                HorizontalDivider(color = DividerDark, modifier = Modifier.padding(vertical = 12.dp))
+                HorizontalDivider(color = Color(0xFF1A3355), modifier = Modifier.padding(vertical = 12.dp))
                 InfoRow("版本", "v1.0.0")
             }
         }

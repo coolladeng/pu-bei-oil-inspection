@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- 网络权限 -->
+    <!-- 缃戠粶鏉冮檺 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <!-- NFC 权限 -->
+    <!-- NFC 鏉冮檺 -->
     <uses-permission android:name="android.permission.NFC" />
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="false" />
 
-    <!-- 相机权限 -->
+    <!-- 鐩告満鏉冮檺 -->
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <!-- 存储权限 -->
+    <!-- 瀛樺偍鏉冮檺 -->
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
@@ -22,14 +22,14 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
 
-    <!-- GPS 定位 (水印坐标) -->
+    <!-- GPS 瀹氫綅 (姘村嵃鍧愭爣) -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".OilInspectionApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.OilInspection"
@@ -55,7 +55,7 @@
                 android:resource="@xml/nfc_tech_filter" />
         </activity>
 
-        <!-- FileProvider (拍照) -->
+        <!-- FileProvider (鎷嶇収) -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"

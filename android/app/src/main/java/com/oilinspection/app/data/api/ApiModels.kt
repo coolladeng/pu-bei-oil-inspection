@@ -25,3 +25,6 @@ data class UserInfo(
     @SerializedName("dept_name") val deptName: String?,
     @SerializedName("dept_id") val deptId: Long?
 )
+
+// Upload response
+data class UploadResponse(val url: String)

@@ -7,7 +7,6 @@ import android.content.IntentFilter
 import android.nfc.NfcAdapter
 import android.nfc.Tag
 import android.nfc.tech.NfcA
-import android.nfc.tech.Ntag213
 import android.util.Log
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -44,7 +43,7 @@ class NfcHelper @Inject constructor() {
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
         val filters = arrayOf(IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED))
-        val techList = arrayOf(arrayOf(NfcA::class.java.name, Ntag213::class.java.name))
+        val techList = arrayOf(arrayOf(NfcA::class.java.name, NfcA::class.java.name))
 
         try {
             adapter.enableForegroundDispatch(activity, intent, filters, techList)
@@ -66,7 +65,7 @@ class NfcHelper @Inject constructor() {
 
     /**
      * 从 Intent 中读取 NFC 标签 UID
-     * NTAG213 标签 UID 为 7 字节
+     * NfcA 标签 UID 为 7 字节
      */
     fun readUidFromIntent(intent: Intent?): String? {
         val tag: Tag? = intent?.getParcelableExtra(NfcAdapter.EXTRA_TAG)
